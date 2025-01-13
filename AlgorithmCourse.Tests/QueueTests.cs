@@ -8,7 +8,7 @@ public class QueueTests
     [Fact]
     public void Queue_should_have_zero_length_when_initialized()
     {
-        var sut = new MyQueue<int>();
+        var sut = new SimpleQueue<int>();
 
         sut.Length.Should().Be(0);
     }
@@ -17,7 +17,7 @@ public class QueueTests
     public void Queue_should_have_same_length_as_input_after_enqueueing()
     {
         var input = CreateInput();
-        var sut = new MyQueue<int>();
+        var sut = new SimpleQueue<int>();
 
         foreach (var item in input)
         {
@@ -31,7 +31,7 @@ public class QueueTests
     public void Queue_should_return_same_order_as_input()
     {
         var input = CreateInput();
-        var sut = new MyQueue<int>();
+        var sut = new SimpleQueue<int>();
 
         foreach (var item in input)
         {
